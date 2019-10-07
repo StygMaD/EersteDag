@@ -6,11 +6,37 @@
     </style>
 
     <script>
+        function functie(){
+            alert("geklikt");
+            var studentvoornaam = "Johan";
+            var studentleeftijd = 25;
+            voorstellen(studentvoornaam, studentleeftijd);
+        }
+
+        function voorstellen(voornaam, leeftijd){
+
+            alert("ik ben " + voornaam + " en ik ben " + leeftijd + " jaar");
+        }
+
+        function viaeenobject(){
+            var student1 = {};
+            student1.voornaam = "fred";
+            student1.leeftijd = 45;
+            voorstellenviaobject(student1);
+        }
+
+        function voorstellenviaobject(student){
+            alert("Ik ben "+ student.voornaam +" en ik ben " + student.leeftijd)
+        }
+    
     </script>
 </head>
 
 <body>
-    <p>Dit is een stukje tekst</p>
+    <p>
+        <input type="button" value="klik maar" onclick="functie()">
+        <input type="button" value="klik maar" onclick="viaeenobject()">
+    </p>
 </body>
 
 </html>
